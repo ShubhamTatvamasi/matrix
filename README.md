@@ -7,5 +7,6 @@ helm repo add halkeye https://halkeye.github.io/helm-charts/
 
 Install synapse:
 ```bash
-helm upgrade -i synapse halkeye/synapse
+helm upgrade -i synapse halkeye/synapse \
+  --set homeserver.server_name=matrix.example.com
 ```
