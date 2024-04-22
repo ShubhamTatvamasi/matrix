@@ -13,7 +13,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
   --create-namespace \
   --namespace ingress-nginx \
   --set controller.ingressClassResource.default=true \
-  --set controller.ingressClass=nginx-ingress
+  --set controller.ingressClassResource.name=nginx-ingress
 ```
 
 Install cert-manager:
