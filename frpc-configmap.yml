@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: frpc-config
 data:
-  frpc.ini: |
+  frpc.toml: |
     [common]
     server_addr = matrix.example.com
     server_port = 7000
