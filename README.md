@@ -9,5 +9,6 @@ Install synapse:
 ```bash
 helm upgrade -i synapse halkeye/synapse \
   --set homeserver.server_name=matrix.example.com \
-  --set postgresql.enabled=true
+  --set postgresql.enabled=true \
+  --set homeserver.macaroon_secret_key=$(openssl rand -hex 32)
 ```
