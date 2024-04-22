@@ -43,6 +43,11 @@ spec:
 EOF
 ```
 
+Install frpc:
+```bash
+kubectl -n ingress-nginx apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/matrix/master/frpc-configmap.yml
+kubectl -n ingress-nginx apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/frp/master/k8s/client/deployment.yml
+```
 
 Install synapse:
 ```bash
