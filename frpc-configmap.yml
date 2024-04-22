@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frpc-config
+data:
+  frpc.ini: |
+    [common]
+    server_addr = matrix.example.com
+    server_port = 7000
+
+    [matrix_example_com_http]
+    type = http
+    local_ip = ingress-nginx-controller
+    local_port = 80
+    custom_domains = matrix.example.com
+
+    [matrix_example_com_https]
+    type = https
+    local_ip = ingress-nginx-controller
+    local_port = 443
+    custom_domains = matrix.example.com
