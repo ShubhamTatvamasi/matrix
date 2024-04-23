@@ -2,7 +2,7 @@
 
 Add helm repos:
 ```bash
-helm repo add halkeye https://halkeye.github.io/helm-charts/
+helm repo add ananace-charts https://ananace.gitlab.io/charts
 helm repo add jetstack https://charts.jetstack.io
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 ```
@@ -49,11 +49,11 @@ kubectl -n ingress-nginx apply -f https://raw.githubusercontent.com/ShubhamTatva
 kubectl -n ingress-nginx apply -f https://raw.githubusercontent.com/ShubhamTatvamasi/frp/master/k8s/client/deployment.yml
 ```
 
-Install synapse:
+Install matrix-synapse:
 ```bash
-helm upgrade -i synapse halkeye/synapse \
-  --set homeserver.server_name=matrix.example.com \
-  --set postgresql.enabled=true \
-  --set homeserver.macaroon_secret_key=$(openssl rand -hex 32) \
-  --set ingress.enabled=true
+helm upgrade -i matrix-synapse ananace-charts/matrix-synapse \
+  --create-namespace \
+  --namespace matrix-synapse \
+  --set serverName=matrix.synergyquantum.in \
+  --set wellknown.enabled=true
 ```
