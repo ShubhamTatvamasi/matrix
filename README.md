@@ -2,9 +2,9 @@
 
 Add helm repos:
 ```bash
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo add ananace-charts https://ananace.gitlab.io/charts
 helm repo add jetstack https://charts.jetstack.io
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 ```
 
 Install ingress-nginx:
