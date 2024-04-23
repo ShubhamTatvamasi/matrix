@@ -12,8 +12,7 @@ Install ingress-nginx:
 helm install ingress-nginx ingress-nginx/ingress-nginx \
   --create-namespace \
   --namespace ingress-nginx \
-  --set controller.ingressClassResource.default=true \
-  --set controller.ingressClassResource.name=nginx-ingress
+  --set controller.ingressClassResource.default=true
 ```
 
 Install cert-manager:
@@ -39,7 +38,7 @@ spec:
     solvers:
     - http01:
         ingress:
-          ingressClassName: nginx-ingress
+          ingressClassName: nginx
 EOF
 ```
 
