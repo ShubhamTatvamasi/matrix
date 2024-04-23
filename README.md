@@ -60,6 +60,14 @@ helm upgrade -i matrix-synapse ananace-charts/matrix-synapse \
   --set ingress.tls[0].hosts[0]=matrix.example.in
 ```
 
+You can create a user in your new Synapse install by running the following command: `(replacing USERNAME and PASSWORD)`
+```bash
+export POD_NAME=$(kubectl get pods --namespace matrix-synapse -l "app.kubernetes.io/name=matrix-synapse,app.kubernetes.io/instance=matrix-synapse,app.kubernetes.io/component=synapse" -o jsonpath="{.items[0].metadata.name}")
+
+kubectl exec --namespace matrix-synapse $POD_NAME -- register_new_matrix_user -c /synapse/config/homeserver.yaml -c /synapse/config/conf.d/secrets.yaml -u USERNAME -p PASSWORD --admin http://localhost:8008
+```
+> You can also specify --no-admin to create a non-admin user.
+
 Uninstall matrix-synapse:
 ```bash
 helm un matrix-synapse --namespace matrix-synapse
