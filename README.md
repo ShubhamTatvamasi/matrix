@@ -57,3 +57,11 @@ helm upgrade -i matrix-synapse ananace-charts/matrix-synapse \
   --set serverName=matrix.synergyquantum.in \
   --set wellknown.enabled=true
 ```
+
+Uninstall matrix-synapse:
+```bash
+helm un matrix-synapse --namespace matrix-synapse
+kubectl delete ns matrix-synapse
+```
+
+
