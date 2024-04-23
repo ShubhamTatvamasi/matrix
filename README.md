@@ -53,8 +53,11 @@ Install matrix-synapse:
 helm upgrade -i matrix-synapse ananace-charts/matrix-synapse \
   --create-namespace \
   --namespace matrix-synapse \
-  --set serverName=matrix.synergyquantum.in \
-  --set wellknown.enabled=true
+  --set serverName=matrix.example.in \
+  --set wellknown.enabled=true \
+  --set ingress.annotations."cert-manager\.io/cluster-issuer=letsencrypt-prod" \
+  --set ingress.tls[0].secretName=matrix-example-in-tls \
+  --set ingress.tls[0].hosts[0]=matrix.example.in
 ```
 
 Uninstall matrix-synapse:
