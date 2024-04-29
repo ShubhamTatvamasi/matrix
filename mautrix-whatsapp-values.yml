@@ -462,9 +462,9 @@ registration:
   rate_limited: false
   namespaces:
     users:
-      - regex: ^@whatsappbot:matrix\.synergyquantum\.in$
+      - regex: ^@whatsappbot:matrix\.example\.com$
         exclusive: true
-      - regex: ^@whatsapp_.*:matrix\.synergyquantum\.in$
+      - regex: ^@whatsapp_.*:matrix\.example\.com$
         exclusive: true
   de.sorunome.msc2409.push_ephemeral: true
   push_ephemeral: true
