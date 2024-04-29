@@ -7,3 +7,8 @@ helm upgrade -i mautrix-whatsapp halkeye/mautrix-whatsapp \
   --values mautrix-whatsapp-values.yml
 ```
 
+Generate registration file:
+```bash
+mautrix-whatsapp -g -c config.yaml -r registration-new.yaml
+```
+
