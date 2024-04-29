@@ -8,5 +8,6 @@ kubectl -n matrix-synapse exec -it matrix-synapse-postgresql-0 -- \
 
 Create database for WhatsApp:
 ```bash
-createdb --encoding=UTF8 --locale=C --template=template0 --owner=synapse whatsapp
+kubectl -n matrix-synapse exec -it matrix-synapse-postgresql-0 -- \
+  bash -c 'PGPASSWORD=synapse createdb -U synapse -E UTF8 -l C -T template0 -O synapse whatsapp'
 ```
