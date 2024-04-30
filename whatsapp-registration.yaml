@@ -1,0 +1,14 @@
+as_token: mXRQTMmKUJOyXjEfqBotnOkL8onqWsCZYcx5dsFuU0w4HMjor3uP2vVpw1wV0HK3
+de.sorunome.msc2409.push_ephemeral: true
+hs_token: B0R5KAfsQwnFMoavvfqLoqgEjtbYscanOiSXGnQ6hvabUMKSTNmmieA0LsMErMpA
+id: whatsapp
+namespaces:
+  users:
+  - exclusive: true
+    regex: ^@whatsappbot:matrix\.synergyquantum\.in$
+  - exclusive: true
+    regex: ^@whatsapp_.*:matrix\.synergyquantum\.in$
+push_ephemeral: true
+rate_limited: false
+sender_localpart: wcVloH2ACaUGwUoFdgauzQQOn9zpudOL
+url: http://mautrix-whatsapp:29318
