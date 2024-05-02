@@ -57,7 +57,8 @@ helm upgrade -i matrix-synapse ananace-charts/matrix-synapse \
   --set wellknown.enabled=true \
   --set ingress.annotations."cert-manager\.io/cluster-issuer=letsencrypt-prod" \
   --set ingress.tls[0].secretName=matrix-example-com-tls \
-  --set ingress.tls[0].hosts[0]=matrix.example.com
+  --set ingress.tls[0].hosts[0]=matrix.example.com \
+  --set extraSecrets.app_service_config_files[0]=/synapse/data/bridges/whatsapp-registration.yaml
 ```
 
 You can create a user in your new Synapse install by running the following command: `(replacing USERNAME and PASSWORD)`
