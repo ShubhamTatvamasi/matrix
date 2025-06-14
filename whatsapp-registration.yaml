@@ -5,9 +5,9 @@ id: whatsapp
 namespaces:
   users:
   - exclusive: true
-    regex: ^@whatsappbot:matrix\.synergyquantum\.in$
+    regex: ^@whatsappbot:matrix\.shubhamtatvamasi\.com$
   - exclusive: true
-    regex: ^@whatsapp_.*:matrix\.synergyquantum\.in$
+    regex: ^@whatsapp_.*:matrix\.shubhamtatvamasi\.com$
 push_ephemeral: true
 rate_limited: false
 sender_localpart: wcVloH2ACaUGwUoFdgauzQQOn9zpudOL

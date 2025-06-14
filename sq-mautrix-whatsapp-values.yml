@@ -4,9 +4,9 @@ config:
   # Homeserver details.
   homeserver:
     # The address that this appservice can use to connect to the homeserver.
-    address: https://matrix.synergyquantum.in
+    address: https://matrix.shubhamtatvamasi.com
     # The domain of the homeserver (also known as server_name, used for MXIDs, etc).
-    domain: matrix.synergyquantum.in
+    domain: matrix.shubhamtatvamasi.com
     # What software is the homeserver running?
     # Standard Matrix homeservers like Synapse, Dendrite and Conduit should just use "standard" here.
     software: standard
@@ -39,7 +39,7 @@ config:
       # The database URI.
       #   SQLite: A raw file path is supported, but `file:<path>?_txlock=immediate` is recommended.
       #           https://github.com/mattn/go-sqlite3#connection-string
-      #   Postgres: Connection string. For synergyquantum, postgres://user:password@host/database?sslmode=disable
+      #   Postgres: Connection string. For shubhamtatvamasi, postgres://user:password@host/database?sslmode=disable
       #             To connect via Unix socket, use something like postgres:///dbname?host=/var/run/postgresql
       uri: postgres://synapse:synapse@matrix-synapse-postgresql/whatsapp?sslmode=disable
       # Maximum number of connections. Mostly relevant for Postgres.
@@ -180,7 +180,7 @@ config:
       # Each deferred backfill config should define a "stage" of backfill (i.e. the last week of messages).
       # The fields are as follows:
       # - start_days_ago: the number of days ago to start backfilling from.
-      #     To indicate the start of time, use -1. For synergyquantum, for a week ago, use 7.
+      #     To indicate the start of time, use -1. For shubhamtatvamasi, for a week ago, use 7.
       # - max_batch_events: the number of events to send per batch.
       # - batch_delay: the number of seconds to wait before backfilling each batch.
       deferred:
@@ -229,7 +229,7 @@ config:
     force_active_delivery_receipts: false
     # Servers to always allow double puppeting from
     double_puppet_server_map:
-      synergyquantum.in: https://synergyquantum.in
+      shubhamtatvamasi.com: https://shubhamtatvamasi.com
     # Allow using double puppeting from any server with a valid client .well-known file.
     double_puppet_allow_discovery: false
     # Shared secrets for https://github.com/devture/matrix-synapse-shared-secret-auth
@@ -238,7 +238,7 @@ config:
     # instead of users having to find an access token and run `login-matrix`
     # manually.
     login_shared_secret_map:
-      synergyquantum.in: foobar
+      shubhamtatvamasi.com: foobar
     # Whether to explicitly set the avatar and room name for private chat portal rooms.
     # If set to `default`, this will be enabled in encrypted rooms and disabled in unencrypted rooms.
     # If set to `always`, all DM rooms will have explicit names and avatars set.
@@ -422,8 +422,8 @@ config:
     #     mxid - Specific user
     permissions:
       "*": relay
-      "matrix.synergyquantum.in": user
-      "@admin:matrix.synergyquantum.in": admin
+      "matrix.shubhamtatvamasi.com": user
+      "@admin:matrix.shubhamtatvamasi.com": admin
     # Settings for relay mode
     relay:
       # Whether relay mode should be allowed. If allowed, `!wa set-relay` can be used to turn any
@@ -462,9 +462,9 @@ registration:
   rate_limited: false
   namespaces:
     users:
-      - regex: ^@whatsappbot:matrix\.synergyquantum\.in$
+      - regex: ^@whatsappbot:matrix\.shubhamtatvamasi\.com$
         exclusive: true
-      - regex: ^@whatsapp_.*:matrix\.synergyquantum\.in$
+      - regex: ^@whatsapp_.*:matrix\.shubhamtatvamasi\.com$
         exclusive: true
   de.sorunome.msc2409.push_ephemeral: true
   push_ephemeral: true
